@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pr0g</title><link href="/" rel="alternate"></link><link href="http://pr0g.com.br/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2013-01-12T22:55:00-02:00</updated><entry><title>Segundo</title><link href="/segundo.html" rel="alternate"></link><updated>2013-01-12T22:55:00-02:00</updated><author><name>Paulo Alem</name></author><id>tag:,2013-01-12:segundo.html</id><summary type="html">&lt;p&gt;Olá.&lt;/p&gt;
+&lt;p&gt;Meu nome é Paulo, sou developer e nesse blog pretendo falar sobre tecnologia, coisas do trabalho, projetos interessantes e besteiras aleatórias.&lt;/p&gt;
+&lt;p&gt;Espero ter a disciplina necessária para postar aqui com uma frequência razoavel :-)&lt;/p&gt;
+&lt;p&gt;Até.&lt;/p&gt;
+</summary></entry><entry><title>Hello</title><link href="/hello.html" rel="alternate"></link><updated>2013-01-12T22:30:00-02:00</updated><author><name>Paulo Alem</name></author><id>tag:,2013-01-12:hello.html</id><summary type="html">&lt;p&gt;Hello,
+Is there anybody in there?
+Just nod if you can hear me&lt;/p&gt;
+</summary></entry></feed>

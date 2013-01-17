@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pr0g</title><link href="/" rel="alternate"></link><link href="/feeds/general.atom.xml" rel="self"></link><id>/</id><updated>2013-01-12T22:30:00+01:00</updated><entry><title>Hello</title><link href="/hello.html" rel="alternate"></link><updated>2013-01-12T22:30:00+01:00</updated><author><name>paulo.alem</name></author><id>tag:,2013-01-12:hello.html</id><summary type="html">&lt;p&gt;Hello,
+Is there anybody in there?
+Just nod if you can hear me&lt;/p&gt;
+</summary></entry></feed>
