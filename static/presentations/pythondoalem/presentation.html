@@ -1,1758 +1,414 @@
 <!DOCTYPE html>
+
 <!--
-  Copyright 2010 Google Inc.
+Google HTML5 slide template
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
+Authors: Luke Mahé (code)
+Marcin Wichary (code and design)
 
-     http://www.apache.org/licenses/LICENSE-2.0
+Dominic Mazzoni (browser compatibility)
+Charles Chen (ChromeVox support)
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-
-  Original slides: Marcin Wichary (mwichary@google.com)
-  Modifications: Ernest Delgado (ernestd@google.com)
-                 Alex Russell (slightlyoff@chromium.org)
-
-  landslide modifications: Adam Zapletal (adamzap@gmail.com)
-                           Nicolas Perriault (nperriault@gmail.com)
+URL: http://code.google.com/p/html5slides/
 -->
+
 <html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Python do Além</title>
-    <!-- Styles -->
-    
-    <link rel="stylesheet" media="print" href="file:///Users/pauloalem/code/presentations/pythondoalem/theme/css/print.css">
-    <link rel="stylesheet" media="screen, projection" href="file:///Users/pauloalem/code/presentations/pythondoalem/theme/css/screen.css">
-    
-    
-    <!-- /Styles -->
-    <!-- Javascripts -->
-    
-    <script type="text/javascript" src="file:///Users/pauloalem/code/presentations/pythondoalem/theme/js/slides.js"></script>
-    
-    
-    <!-- /Javascripts -->
-</head>
-<body>
-  <div id="blank"></div>
-  <div class="presentation">
-    <div id="current_presenter_notes">
-      <div id="presenter_note"></div>
-    </div>
-    <div class="slides">
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Python do Além</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              1/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Paulo Alem</h1></header>
-            
-            
-            <section><p>Python do Além - Escrevendo Código Pythônico - 10/01/2013</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              2/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Ah, tipo parada de espírito né?</h1></header>
-            
-            
-            <section><img alt="file:///Users/pauloalem/code/presentations/pythondoalem/images/pythondoalem.png" src="file:///Users/pauloalem/code/presentations/pythondoalem/images/pythondoalem.png" /></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              3/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Da importância de código legível</h1></header>
-            
-            
-            <section><img alt="file:///Users/pauloalem/code/presentations/pythondoalem/images/wizard.jpg" src="file:///Users/pauloalem/code/presentations/pythondoalem/images/wizard.jpg" />
-<blockquote class="highlights">
-<p>Programs must be written for people to read, and only incidentally for machines to execute.</p>
-<p class="attribution">&mdash;Abelson &amp; Sussman, SICP</p>
-</blockquote></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              4/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>import this</h1></header>
-            
-            
-            <section><pre><span class="n">The</span> <span class="n">Zen</span> <span class="n">of</span> <span class="n">Python</span><span class="p">,</span> <span class="n">by</span> <span class="n">Tim</span> <span class="n">Peters</span>
-<span class="n">Beautiful</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="o">.</span>
-<span class="n">Explicit</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="o">.</span>
-<span class="n">Simple</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="nb">complex</span><span class="o">.</span>
-<span class="n">Complex</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">complicated</span><span class="o">.</span>
-<span class="n">Flat</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">nested</span><span class="o">.</span>
-<span class="n">Sparse</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">dense</span><span class="o">.</span>
-<span class="n">Readability</span> <span class="n">counts</span><span class="o">.</span>
-<span class="n">Special</span> <span class="n">cases</span> <span class="n">aren</span><span class="s">&#39;t special enough to break the rules.</span>
-<span class="n">Although</span> <span class="n">practicality</span> <span class="n">beats</span> <span class="n">purity</span><span class="o">.</span>
-<span class="n">Errors</span> <span class="n">should</span> <span class="n">never</span> <span class="k">pass</span> <span class="n">silently</span><span class="o">.</span>
-<span class="n">Unless</span> <span class="n">explicitly</span> <span class="n">silenced</span><span class="o">.</span>
-<span class="n">In</span> <span class="n">the</span> <span class="n">face</span> <span class="n">of</span> <span class="n">ambiguity</span><span class="p">,</span> <span class="n">refuse</span> <span class="n">the</span> <span class="n">temptation</span> <span class="n">to</span> <span class="n">guess</span><span class="o">.</span>
-<span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">one</span><span class="o">--</span> <span class="ow">and</span> <span class="n">preferably</span> <span class="n">only</span> <span class="n">one</span> <span class="o">--</span><span class="n">obvious</span> <span class="n">way</span> <span class="n">to</span> <span class="n">do</span> <span class="n">it</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">that</span> <span class="n">way</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">obvious</span> <span class="n">at</span> <span class="n">first</span> <span class="n">unless</span> <span class="n">you</span><span class="s">&#39;re Dutch.</span>
-<span class="n">Now</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">never</span><span class="o">.</span>
-<span class="n">Although</span> <span class="n">never</span> <span class="ow">is</span> <span class="n">often</span> <span class="n">better</span> <span class="n">than</span> <span class="o">*</span><span class="n">right</span><span class="o">*</span> <span class="n">now</span><span class="o">.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">hard</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span><span class="s">&#39;s a bad idea.</span>
-<span class="n">If</span> <span class="n">the</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">easy</span> <span class="n">to</span> <span class="n">explain</span><span class="p">,</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">a</span> <span class="n">good</span> <span class="n">idea</span><span class="o">.</span>
-<span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="s">&#39;s do more of those!</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              5/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Python Idiomático</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              6/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>O vulgo <em>&quot;Pythônico&quot;</em></h1></header>
-            
-            
-            <section><p>Por que escrever código pythonico?</p>
-<ul>
-<li><dl class="first docutils">
-<dt>Manutenebilidade</dt>
-<dd><ul class="first last simple">
-<li>Codigo <em>não pythônico</em> é estranho quando analisado por alguém experiente</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Menor curva de aprendizado</dt>
-<dd><ul class="first last simple">
-<li>Codigo uniforme entre diversos projetos diminui a barreira de entrada</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Aumenta suas chances de receber contribuições e de ter contribuiçoes aceitas em projetos importantes</dt>
-<dd><ul class="first last simple">
-<li>Código não idiomático e/ou mal não é aceito na maioria dos projetos mais proeminentes</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              7/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>PEP 8!</h1></header>
-            
-            
-            <section><p>O primeiro passo para quem busca escrever python idiomático é ler a <strong>PEP8</strong></p>
-<blockquote>
-<a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">http://www.python.org/dev/peps/pep-0008/</a></blockquote>
+    <head>
+        <title>Presentation</title>
 
-<p>PEP = Python Enhancement Proposal = Proposta de Melhoria ao Python
-Pode parecer uma besteira mas é importante seguir a PEP8 sempre que possível.</p>
-<p>Não existe desculpa para nao checar o seu código: existem plugins na maioria dos editores de texto:</p>
+        <meta charset='utf-8'>
+        <script src='http://html5slides.googlecode.com/svn/trunk/slides.js'></script>
+    </head>
 
-<ul class="simple">
-<li>VIM</li>
-<li>Sublime</li>
-<li>Emacs</li>
-<li>PyCharm</li>
-<li>PyDev</li>
-</ul>
-<p>E seu editor não ter suporte não é desculpa.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              8/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Pep8 tool</h1></header>
-            
-            
-            <section><pre class="literal-block">
-$ vim seu_arquivo.py
-</pre>
-<pre><span class="n">uma_string</span> <span class="o">=</span> <span class="s">u&quot;Essa é a historia do menino Charlinho. Charlinho era um menino que só queria estudar&quot;</span>
-<span class="n">um_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">escolha_1</span><span class="p">:</span><span class="s">&quot;batata&quot;</span><span class="p">,</span><span class="n">escolha_2</span><span class="p">:</span><span class="s">&quot;estudar&quot;</span><span class="p">}</span>
-</pre>
-<p>:wq</p>
-<pre class="literal-block">
-$ pip install pep8
-$ pep8 seu_arquivo.py
-seu_arquivo.py:2:3: E231 missing whitespace after ':'
-seu_arquivo.py:2:5: E231 missing whitespace after ','
-seu_arquivo.py:2:7: E231 missing whitespace after ':'
-seu_arquivo:3:80: E501 line too long (84 &gt; 79 characters)
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              9/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Espaços 1</h1></header>
-            
-            
-            <section><p>Espaço em branco normalmente é importante em qualquer linguagem para melhorar a visualização do código, mas em python é <strong>essencial</strong>. A sintaxe da linguagem é controlada por espaços, aqui a coisa é seria e um transtorno obcessivo compulsivo é visto com bons olhos.</p>
-<p>Convenções fortes:</p>
-<ul class="simple">
-<li>4 espaços</li>
-<li>Se preferir 2, 3, 5 espaços, ok, mas seja consistente e não misture</li>
-<li>Tabs = Não... inconsistente.</li>
-<li>Tabs + espaços = O inferno tem um lugarzinho reservado para você, certamente</li>
-<li>Uma linha em branco separando metodos de classes</li>
-<li>Duas linhas em branco separando funções e classes em um mesmo módulo</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              10/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Espaços 2</h1></header>
-            
-            
-            <section><ul class="simple">
-<li>Espaços depois de &quot;,&quot; em dicionários, listas, tuplas e listas de argumentos e depois de &quot;:&quot; em dicionários</li>
-<li>Espaços em volta de atribuições e comparações(exceto em listas de argumentos).</li>
-<li>Sem espaços em docstrings</li>
-</ul>
-<p><strong>Ruim:</strong></p>
-<pre><span class="k">def</span> <span class="nf">bola_quadrada</span><span class="p">(</span><span class="n">chave</span><span class="p">,</span><span class="n">valor</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Retorna um dicionário e uma lista... &quot;&quot;&quot;</span>
-    <span class="n">d</span><span class="o">=</span><span class="p">{</span><span class="n">chave</span><span class="p">:</span><span class="n">valor</span><span class="p">}</span>
-    <span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="n">chave</span><span class="p">,</span><span class="n">valor</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">d</span><span class="p">,</span><span class="n">l</span>
-</pre>
-<p><strong>Bom:</strong></p>
-<pre><span class="k">def</span> <span class="nf">bola_quadrada</span><span class="p">(</span><span class="n">chave</span><span class="p">,</span> <span class="n">valor</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Retorna um dicionário e uma lista...&quot;&quot;&quot;</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">chave</span><span class="p">:</span> <span class="n">valor</span><span class="p">}</span>
-    <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="n">chave</span><span class="p">,</span> <span class="n">valor</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">d</span><span class="p">,</span> <span class="n">l</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              11/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Nomes</h1></header>
-            
-            
-            <section><ul class="simple">
-<li><cite>junto_minusculo</cite> em funções, métodos e atributos</li>
-<li><cite>JUNTO_MAIUSCULO</cite> para constantes</li>
-<li><cite>CamelCase</cite> para classes</li>
-<li>Atributos de classe: <cite>publico</cite>, <cite>_interno</cite>, <cite>__privado</cite>. Isso não é o mesmo que privado de Java e provavelmente você não vai precisar definir nada desse jeito.</li>
-</ul>
-<blockquote class="highlights">
-<p>Q. Will Python 3000 provide &quot;real&quot; private, protected and public?
-A. No. Python will remain an &quot;open kimono&quot; language.</p>
-<blockquote>
--- Guido Van Rossum</blockquote>
-</blockquote>
-<pre class="literal-block">
-http://www.artima.com/weblogs/viewpost.jsp?thread=211430
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              12/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Linhas Longas</h1></header>
-            
-            
-            <section><p><strong>Ruim:</strong></p>
-<pre><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">um</span><span class="p">,</span> <span class="n">dois</span><span class="p">,</span> <span class="n">tres</span><span class="p">,</span> <span class="n">quatro</span><span class="p">,</span> <span class="n">cinco</span><span class="p">,</span> <span class="n">seis</span><span class="p">,</span> <span class="n">sete</span><span class="o">=</span><span class="s">&quot;vii&quot;</span><span class="p">,</span> <span class="n">oito</span><span class="o">=</span><span class="s">&quot;88888888&quot;</span><span class="p">,</span> <span class="n">nove</span><span class="o">=</span><span class="s">&quot;nove?&quot;</span><span class="p">,</span> <span class="n">dez</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="n">um_smile_muito_irado</span> <span class="o">=</span> <span class="s">&quot;:)&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">uma_variavel_de_nome_muito_gigante_meio_idiota</span> <span class="o">=</span> <span class="n">um_smile_muito_irado</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">um</span> <span class="o">+</span> <span class="n">dois</span> <span class="o">+</span> <span class="n">tres</span> <span class="o">+</span> <span class="n">quatro</span> <span class="o">+</span> <span class="n">cinco</span> <span class="o">+</span> <span class="n">seis</span> <span class="o">+</span> <span class="n">sete</span> <span class="o">+</span> <span class="n">oito</span> <span class="o">+</span> <span class="n">nove</span> <span class="o">+</span> <span class="n">dez</span><span class="p">)</span>
-</pre>
-<p><strong>Bom:</strong></p>
-<pre><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">um</span><span class="p">,</span> <span class="n">dois</span><span class="p">,</span> <span class="n">tres</span><span class="p">,</span> <span class="n">quatro</span><span class="p">,</span> <span class="n">cinco</span><span class="p">,</span> <span class="n">seis</span><span class="p">,</span>
-             <span class="n">sete</span><span class="o">=</span><span class="s">&quot;vii&quot;</span><span class="p">,</span> <span class="n">oito</span><span class="o">=</span><span class="s">&quot;88888888&quot;</span><span class="p">,</span> <span class="n">nove</span><span class="o">=</span><span class="s">&quot;nove?&quot;</span><span class="p">,</span>
-             <span class="n">dez</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="n">um_smile_muito_irado</span> <span class="o">=</span> <span class="s">&quot;:)&quot;</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">uma_variavel_de_nome_muito_gigante_meio_idiota</span> \
-        <span class="o">=</span> <span class="n">um_smile_muito_irado</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">um</span> <span class="o">+</span> <span class="n">dois</span> <span class="o">+</span> <span class="n">tres</span> <span class="o">+</span> <span class="n">quatro</span> <span class="o">+</span> <span class="n">cinco</span> <span class="o">+</span>
-            <span class="n">seis</span> <span class="o">+</span> <span class="n">sete</span> <span class="o">+</span> <span class="n">oito</span> <span class="o">+</span> <span class="n">nove</span> <span class="o">+</span> <span class="n">dez</span><span class="p">)</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              13/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Strings Longas</h1></header>
-            
-            
-            <section><p><strong>Ruim:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">uma_string_longa</span> <span class="o">=</span> <span class="s">&quot;ao inves de concatenar com mais&quot;</span><span class="o">+</span> \
-                       <span class="s">&quot;e contra-barra &quot;</span> <span class="o">+</span> \
-                       <span class="s">&quot;voce pode usar a concatenação&quot;</span><span class="o">+</span> \
-                       <span class="s">&quot;implícita de strings&quot;</span>
-</pre>
-<p><strong>Mais ou menoj:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">uma_string_longa</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span><span class="se">\</span>
-<span class="s">ou uma docstring</span>
-<span class="s">com contra-barras</span>
-<span class="s">para tirar os newlines</span><span class="se">\</span>
-<span class="s">&quot;&quot;&quot;</span>
-</pre>
-<p><strong>Bom:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">uma_string_longa</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;voce pode usar a concatenação&quot;</span>
-                       <span class="s">&quot;implícita&quot;</span>
-                       <span class="s">&quot;de&quot;</span>
-                       <span class="s">&quot;strings&quot;</span><span class="p">)</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              14/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Expressões</h1></header>
-            
-            
-            <section><p><strong>Ruim:</strong></p>
-<pre><span class="c"># otimizando código:</span>
-<span class="c"># melhora a performance e economiza memória...</span>
-<span class="k">if</span> <span class="n">foo</span><span class="o">==</span><span class="s">&quot;bar&quot;</span><span class="p">:</span><span class="n">faz_algo</span><span class="p">();</span>
-<span class="n">faz_coisa</span><span class="p">();</span><span class="n">faz_treco</span><span class="p">();</span><span class="n">planta_bananeira</span><span class="p">();</span>
-</pre>
-<p><strong>Bom:</strong></p>
-<pre><span class="k">if</span> <span class="n">foo</span> <span class="o">==</span> <span class="s">&quot;bar&quot;</span><span class="p">:</span>
-    <span class="n">faz_algo</span><span class="p">()</span>
-<span class="n">faz_coisa</span><span class="p">()</span>
-<span class="n">faz_treco</span><span class="p">()</span>
-<span class="n">planta_bananeira</span><span class="p">()</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              15/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Saiba quebrar as regras!</h1></header>
-            
-            
-            <section><p>As vezes não dá pra seguir o PEP8 ou fica ruim... Cabe o bom senso.</p>
-<img alt="file:///Users/pauloalem/code/presentations/pythondoalem/images/common-sense.jpg" src="file:///Users/pauloalem/code/presentations/pythondoalem/images/common-sense.jpg" /></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              16/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Idiomas Úteis(eu tava guardando, agora que fica interessante)</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              17/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Unpacking</h1></header>
-            
-            
-            <section><p>Trocando valores em linguagens mais baixo nível:</p>
-<pre class="literal-block">
-temp = a
-a = b
-b = temp
-</pre>
-<p>Em Python:</p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
-</pre>
-<p>O que aconteceu?</p>
-<ul class="simple">
-<li>Uma tupla foi criada no lado direito</li>
-<li>Uma tupla foi criada no lado esquerdo</li>
-<li>A tupla da direita foi <em>desempacotada</em> (unpacking) na da esquerda</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              18/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Unpacking 2</h1></header>
-            
-            
-            <section><p>Também funciona com listas:</p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Charlinho&quot;</span><span class="p">,</span> <span class="s">&quot;queria&quot;</span><span class="p">,</span> <span class="s">&quot;estudar&quot;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">lista</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
-<span class="n">Charlinho</span>
-</pre>
-<p>Em loops:</p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]:</span>
-<span class="o">...</span>   <span class="k">print</span> <span class="s">&quot;</span><span class="si">%d</span><span class="s"> </span><span class="si">%d</span><span class="s"> </span><span class="si">%d</span><span class="s">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
-<span class="o">...</span>
-<span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span>
-<span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              19/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Python 3 bonus</h1></header>
-            
-            
-            <section><p>Novo feature do python 3, extended unpacking</p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <style>
+        .slides article   { background-image:none !important; background-color:white;}
+    </style>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
-<span class="mi">0</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <body style='display: none'>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
-<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
-<span class="mi">4</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              20/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Strings</h1></header>
-            
-            
-            <section><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Charlinho&quot;</span><span class="p">,</span> <span class="s">&quot;um&quot;</span><span class="p">,</span> <span class="s">&quot;exemplo&quot;</span><span class="p">,</span> <span class="s">&quot;de&quot;</span><span class="p">,</span> <span class="s">&quot;vida&quot;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">concatena</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
-<span class="o">...</span>   <span class="n">result</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
-<span class="o">...</span>   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
-<span class="o">...</span>     <span class="n">result</span> <span class="o">+=</span> <span class="n">i</span>
-</pre>
-<p>Por favor, não.</p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">cProfile</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">&quot;concatena(lista * 1000000)&quot;</span><span class="p">)</span>
-         <span class="mi">3</span> <span class="n">function</span> <span class="n">calls</span> <span class="ow">in</span> <span class="mf">0.801</span> <span class="n">seconds</span>
-   <span class="n">ncalls</span>  <span class="n">tottime</span>  <span class="n">percall</span>  <span class="n">cumtime</span>  <span class="n">percall</span> <span class="n">filename</span><span class="p">:</span><span class="n">lineno</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
-        <span class="mi">1</span>    <span class="mf">0.754</span>    <span class="mf">0.754</span>    <span class="mf">0.754</span>    <span class="mf">0.754</span> <span class="o">&lt;</span><span class="n">stdin</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span><span class="p">(</span><span class="n">lento</span><span class="p">)</span>
-        <span class="mi">1</span>    <span class="mf">0.048</span>    <span class="mf">0.048</span>    <span class="mf">0.801</span>    <span class="mf">0.801</span> <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span><span class="p">(</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">)</span>
-        <span class="mi">1</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span> <span class="p">{</span><span class="n">method</span> <span class="s">&#39;disable&#39;</span> <span class="n">of</span> <span class="s">&#39;_lsprof.Profiler&#39;</span> <span class="n">objects</span><span class="p">}</span>
-</pre>
-<p>Use ''.join()</p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">cProfile</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s">&quot;&#39;&#39;.join(lista * 1000000)&quot;</span><span class="p">)</span>
-         <span class="mi">3</span> <span class="n">function</span> <span class="n">calls</span> <span class="ow">in</span> <span class="mf">0.133</span> <span class="n">seconds</span>
-   <span class="n">ncalls</span>  <span class="n">tottime</span>  <span class="n">percall</span>  <span class="n">cumtime</span>  <span class="n">percall</span> <span class="n">filename</span><span class="p">:</span><span class="n">lineno</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
-        <span class="mi">1</span>    <span class="mf">0.043</span>    <span class="mf">0.043</span>    <span class="mf">0.133</span>    <span class="mf">0.133</span> <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span><span class="p">(</span><span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">)</span>
-        <span class="mi">1</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span>    <span class="mf">0.000</span> <span class="p">{</span><span class="n">method</span> <span class="s">&#39;disable&#39;</span> <span class="n">of</span> <span class="s">&#39;_lsprof.Profiler&#39;</span> <span class="n">objects</span><span class="p">}</span>
-        <span class="mi">1</span>    <span class="mf">0.090</span>    <span class="mf">0.090</span>    <span class="mf">0.090</span>    <span class="mf">0.090</span> <span class="p">{</span><span class="n">method</span> <span class="s">&#39;join&#39;</span> <span class="n">of</span> <span class="s">&#39;str&#39;</span> <span class="n">objects</span><span class="p">}</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              21/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Sempre que possivel use <cite>in</cite></h1></header>
-            
-            
-            <section><p>Flexivel e funciona em todos os tipos de iteráveis</p>
-<p><strong>Bom:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="ow">in</span> <span class="n">t</span>
-<span class="bp">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">l</span>
-<span class="bp">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="s">&#39;b&#39;</span> <span class="ow">in</span> <span class="n">d</span>
-<span class="bp">True</span>
-</pre>
-<p><strong>Não:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="o">...</span>
-</pre>
-<p><strong>Ok:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-    <span class="o">...</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              22/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Testando Valores</h1></header>
-            
-            
-            <section><pre class="literal-block">
-# faça isso:      # não isso:
-if x:             if x == True:
-    pass              pass
-</pre>
-<pre class="literal-block">
-Testando uma lista:
+        <section class='slides layout-regular template-default my-layout'>
+        <article>
+        <h1>
+            Python do Além
+        </h1>
+        <p>
+        Paulo Alem
+        <br>
+        10/01/2013
+        </p>
+        </article>
 
-    # faça isso:      # não isso:
-    if itens:         if len(itens) != 0:
-        pass              pass
+        <article class='fill smaller'>
+        <h3>
+            Entao você tá me dizendo que vai falar <br>
+            de umas paradas de espíritos e tal, né?
+        </h3>
+        <p>
+        <img src='images/pythondoalem.png'>
+        </p>
+        <!--
+        <q>
+            O "Além" é a ideia de um lugar em que
+            pelo menos uma parte da nossa consciência ou identidade
+            continua existindo após a nossa morte.
+        </q>
+        <div class="author">Wiki Pedia</div>
+        !-->
+        </article>
 
-                      # seu penis cai se fizer isso aqui
-                      if itens != []:
-                          pass
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              23/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>import collections</h1></header>
-            
-            
-            <section><p>Tuplas, listas e dicionários resolvem 90% dos problemas encontrados, mas as vezes é necessario usar outro tipo de estrutura. A biblioteca padão do python vem com várias implementações de estruturas mais específicas prontas para uso</p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">collections</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">collections</span><span class="p">)</span>
-<span class="p">[</span><span class="s">&#39;Callable&#39;</span><span class="p">,</span> <span class="s">&#39;Container&#39;</span><span class="p">,</span> <span class="s">&#39;Counter&#39;</span><span class="p">,</span> <span class="s">&#39;Hashable&#39;</span><span class="p">,</span> <span class="s">&#39;ItemsView&#39;</span><span class="p">,</span> <span class="s">&#39;Iterable&#39;</span><span class="p">,</span>
-<span class="s">&#39;Iterator&#39;</span><span class="p">,</span> <span class="s">&#39;KeysView&#39;</span><span class="p">,</span> <span class="s">&#39;Mapping&#39;</span><span class="p">,</span> <span class="s">&#39;MappingView&#39;</span><span class="p">,</span> <span class="s">&#39;MutableMapping&#39;</span><span class="p">,</span> <span class="s">&#39;MutableSequence&#39;</span><span class="p">,</span>
-<span class="s">&#39;MutableSet&#39;</span><span class="p">,</span> <span class="s">&#39;OrderedDict&#39;</span><span class="p">,</span> <span class="s">&#39;Sequence&#39;</span><span class="p">,</span> <span class="s">&#39;Set&#39;</span><span class="p">,</span> <span class="s">&#39;Sized&#39;</span><span class="p">,</span> <span class="s">&#39;ValuesView&#39;</span><span class="p">,</span>
-<span class="s">&#39;__all__&#39;</span><span class="p">,</span> <span class="s">&#39;__builtins__&#39;</span><span class="p">,</span> <span class="s">&#39;__doc__&#39;</span><span class="p">,</span>
-<span class="s">&#39;__file__&#39;</span><span class="p">,</span> <span class="s">&#39;__name__&#39;</span><span class="p">,</span> <span class="s">&#39;__package__&#39;</span><span class="p">,</span> <span class="s">&#39;_abcoll&#39;</span><span class="p">,</span> <span class="s">&#39;_chain&#39;</span><span class="p">,</span> <span class="s">&#39;_get_ident&#39;</span><span class="p">,</span> <span class="s">&#39;_heapq&#39;</span><span class="p">,</span> <span class="s">&#39;_iskeyword&#39;</span><span class="p">,</span>
-<span class="s">&#39;_itemgetter&#39;</span><span class="p">,</span> <span class="s">&#39;_repeat&#39;</span><span class="p">,</span> <span class="s">&#39;_starmap&#39;</span><span class="p">,</span> <span class="s">&#39;_sys&#39;</span><span class="p">,</span> <span class="s">&#39;defaultdict&#39;</span><span class="p">,</span> <span class="s">&#39;deque&#39;</span><span class="p">,</span> <span class="s">&#39;namedtuple&#39;</span><span class="p">]</span>
-</pre>
-<p>Vamos dar uma olhada rápida</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              24/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>defaultdict</h1></header>
-            
-            
-            <section><p>Ao invés de pre-construir um dicionário ou usar o <cite>get</cite> usando o segundo parametro opcional <cite>default</cite> você pode usar o defaultdict</p>
-<p><strong>Ruim:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;gosta_mais&quot;</span><span class="p">,</span> <span class="s">&quot;batata&quot;</span><span class="p">)</span>
-<span class="s">&#39;batata&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;o_que_prefere&quot;</span><span class="p">,</span> <span class="s">&quot;batata&quot;</span><span class="p">)</span>
-<span class="s">&#39;batata&#39;</span>
-</pre>
-<p><strong>Bom:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span><span class="s">&quot;batata&quot;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="p">[</span><span class="s">&#39;gosta_mais&#39;</span><span class="p">]</span>
-<span class="s">&#39;batata&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="p">[</span><span class="s">&#39;prefere&#39;</span><span class="p">]</span>
-<span class="s">&#39;batata&#39;</span>
-</pre>
-<pre class="literal-block">
-http://docs.python.org/2/library/collections.html#collections.defaultdict
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              25/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Counter</h1></header>
-            
-            
-            <section><p>Estrutura conveniente para fazer contadores de maneira rápida</p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">cnt</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;blue&#39;</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">,</span> <span class="s">&#39;blue&#39;</span><span class="p">,</span> <span class="s">&#39;blue&#39;</span><span class="p">]:</span>
-<span class="o">...</span>     <span class="n">cnt</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">cnt</span>
-<span class="n">Counter</span><span class="p">({</span><span class="s">&#39;blue&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;red&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+        <article>
+        <h3>Da importância do código legível</h3>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="c"># Find the ten most common words in Hamlet</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">re</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&#39;\w+&#39;</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;hamlet.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">Counter</span><span class="p">(</span><span class="n">words</span><span class="p">)</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="p">[(</span><span class="s">&#39;the&#39;</span><span class="p">,</span> <span class="mi">1143</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;and&#39;</span><span class="p">,</span> <span class="mi">966</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;to&#39;</span><span class="p">,</span> <span class="mi">762</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;of&#39;</span><span class="p">,</span> <span class="mi">669</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;i&#39;</span><span class="p">,</span> <span class="mi">631</span><span class="p">),</span>
- <span class="p">(</span><span class="s">&#39;you&#39;</span><span class="p">,</span> <span class="mi">554</span><span class="p">),</span>  <span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="mi">546</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;my&#39;</span><span class="p">,</span> <span class="mi">514</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;hamlet&#39;</span><span class="p">,</span> <span class="mi">471</span><span class="p">),</span> <span class="p">(</span><span class="s">&#39;in&#39;</span><span class="p">,</span> <span class="mi">451</span><span class="p">)]</span>
-</pre>
-<p><tt class="docutils literal">collections.Counter</tt> tem inúmeros metodos úteis, vale a olhada</p>
-<pre class="literal-block">
-http://docs.python.org/2/library/collections.html#collections.Counter
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              26/36
-            </aside>
-          </footer>
+        <q>
+            Programs must be written for people to read, and only incidentally for machines to execute.
+        </q>
+
+        <div class="author">
+            Abelson &amp; Sussman, SICP
         </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Comprehensions</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              27/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Expectativa</h1></header>
-            
-            
-            <section><img alt="file:///Users/pauloalem/code/presentations/pythondoalem/images/expectativa.jpg" src="file:///Users/pauloalem/code/presentations/pythondoalem/images/expectativa.jpg" /></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              28/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Realidade</h1></header>
-            
-            
-            <section><img alt="file:///Users/pauloalem/code/presentations/pythondoalem/images/realidade.jpg" src="file:///Users/pauloalem/code/presentations/pythondoalem/images/realidade.jpg" />
-<p>Tento usar sempre que dá...</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              29/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Recomendações</h1></header>
-            
-            
-            <section><p>O uso de list comprehensions para construção de listas é pythônico e seu uso encorajado sempre que possivel(mas tenha bom senso).</p>
-<p><strong>Ruim:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">youre_doing_it_wrong</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-<span class="o">...</span>     <span class="n">youre_doing_it_wrong</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%d</span><span class="s"> elem&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-</pre>
-<p><strong>Bom:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;</span><span class="si">%d</span><span class="s"> elem&quot;</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-</pre>
-<p><strong>Passou do ponto:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;</span><span class="si">%d</span><span class="s"> </span><span class="si">%d</span><span class="s"> elem&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
-</pre>
-<p>Evite nesting nos list comprehensions. Existem casos válidos, mas <em>normalmente</em> causam a perda de legibilidade.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              30/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Filtrando</h1></header>
-            
-            
-            <section><p>Somente os pares:</p>
-<p><strong>Ruim:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">youre_doing_it_wrong</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-<span class="o">...</span>     <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-<span class="o">...</span>         <span class="n">youre_doing_it_wrong</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%d</span><span class="s"> elem&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span>
-</pre>
-<p><strong>Bom:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;</span><span class="si">%d</span><span class="s"> elem&quot;</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
-</pre>
-<p><strong>Passou do ponto:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;</span><span class="si">%d</span><span class="s"> elem&quot;</span> <span class="o">%</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">10</span> <span class="ow">and</span> <span class="bp">True</span><span class="o">==</span><span class="bp">False</span><span class="p">)]</span>
-</pre>
-<p>Normalmente, mais que dois filtros a coisa começa a ficar feia, melhor fazer da maneira tradicional.</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              31/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Set &amp; Dict Comprehensions</h1></header>
-            
-            
-            <section><p>A partir do python 2.7+ e 3+ a linguagem ganhou os dict e set comprehensions.</p>
-<p><strong>Python &lt; 2.7:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">)</span>
-</pre>
-<p><strong>Novo:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">}</span>
-</pre>
-<p><strong>Python &lt; 2.7:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="s">&#39;ABCDABCD&#39;</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s">&#39;CB&#39;</span><span class="p">])</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
-<span class="nb">set</span><span class="p">([</span><span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="s">&#39;D&#39;</span><span class="p">])</span>
-</pre>
-<p><strong>Novo:</strong></p>
-<pre><span class="o">&gt;&gt;&gt;</span> <span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="s">&#39;ABCDABCD&#39;</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s">&#39;CB&#39;</span><span class="p">}</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">s</span>
-<span class="p">{</span><span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="s">&#39;D&#39;</span><span class="p">}</span>
-</pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              32/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Faltou falar sobre</h1></header>
-            
-            
-            <section><ul class="simple">
-<li>Ferramentas(flakes8)</li>
-<li>Generators</li>
-<li>Generator Expressions</li>
-<li>Default Parameter Values</li>
-<li>String Formatting</li>
-<li>Exception Handling</li>
-<li>Decorators</li>
-</ul>
+
+        </article>
+
+        <article class="smaller">
+        <h3>
+            Python Idiomático
+        </h3>
+
+        <p>Vulgo "Pythônico"</p>
+        <pre>
+>>> import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+        </pre>
 
 
-<h1>Generators</h1>
-<p># TODO</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              33/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Fontes</h1></header>
-            
-            
-            <section><ul class="simple">
-<li>PEP8(<a class="reference external" href="http://www.python.org/dev/peps/pep-0008/#naming-conventions">http://www.python.org/dev/peps/pep-0008/#naming-conventions</a>)</li>
-<li>Code Like a Pythonista: Idiomatic Python (<a class="reference external" href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html">http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html</a>)</li>
-<li>How to write Pythonic Code (<a class="reference external" href="http://chrisarndt.de/talks/rupy/2008/output/slides.html">http://chrisarndt.de/talks/rupy/2008/output/slides.html</a>)</li>
-<li>Python is not Java(<a class="reference external" href="http://dirtsimple.org/2004/12/python-is-not-java.html">http://dirtsimple.org/2004/12/python-is-not-java.html</a>)</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              34/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Perguntas?</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              35/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: slides.rst -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Obrigado :-)</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="slides.rst">slides.rst</a>
-            </aside>
-            
-            <aside class="page_number">
-              36/36
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-  <div id="toc" class="sidebar hidden">
-    <h2>Table of Contents</h2>
-    <table>
-      <caption>Table of Contents</caption>
-      
-      <tr id="toc-row-1">
-        <th><a href="#slide1">Python do Além</a></th>
-        <td><a href="#slide1">1</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-2">
-        <th><a href="#slide2">Paulo Alem</a></th>
-        <td><a href="#slide2">2</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-3">
-        <th><a href="#slide3">Ah, tipo parada de espírito né?</a></th>
-        <td><a href="#slide3">3</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-4">
-        <th><a href="#slide4">Da importância de código legível</a></th>
-        <td><a href="#slide4">4</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-5">
-        <th><a href="#slide5">import this</a></th>
-        <td><a href="#slide5">5</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-6">
-        <th><a href="#slide6">Python Idiomático</a></th>
-        <td><a href="#slide6">6</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-7">
-        <th><a href="#slide7">O vulgo <em>&quot;Pythônico&quot;</em></a></th>
-        <td><a href="#slide7">7</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-8">
-        <th><a href="#slide8">PEP 8!</a></th>
-        <td><a href="#slide8">8</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-9">
-        <th><a href="#slide9">Pep8 tool</a></th>
-        <td><a href="#slide9">9</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-10">
-        <th><a href="#slide10">Espaços 1</a></th>
-        <td><a href="#slide10">10</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-11">
-        <th><a href="#slide11">Espaços 2</a></th>
-        <td><a href="#slide11">11</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-12">
-        <th><a href="#slide12">Nomes</a></th>
-        <td><a href="#slide12">12</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-13">
-        <th><a href="#slide13">Linhas Longas</a></th>
-        <td><a href="#slide13">13</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-14">
-        <th><a href="#slide14">Strings Longas</a></th>
-        <td><a href="#slide14">14</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-15">
-        <th><a href="#slide15">Expressões</a></th>
-        <td><a href="#slide15">15</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-16">
-        <th><a href="#slide16">Saiba quebrar as regras!</a></th>
-        <td><a href="#slide16">16</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-17">
-        <th><a href="#slide17">Idiomas Úteis(eu tava guardando, agora que fica interessante)</a></th>
-        <td><a href="#slide17">17</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-18">
-        <th><a href="#slide18">Unpacking</a></th>
-        <td><a href="#slide18">18</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-19">
-        <th><a href="#slide19">Unpacking 2</a></th>
-        <td><a href="#slide19">19</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-20">
-        <th><a href="#slide20">Python 3 bonus</a></th>
-        <td><a href="#slide20">20</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-21">
-        <th><a href="#slide21">Strings</a></th>
-        <td><a href="#slide21">21</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-22">
-        <th><a href="#slide22">Sempre que possivel use <cite>in</cite></a></th>
-        <td><a href="#slide22">22</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-23">
-        <th><a href="#slide23">Testando Valores</a></th>
-        <td><a href="#slide23">23</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-24">
-        <th><a href="#slide24">import collections</a></th>
-        <td><a href="#slide24">24</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-25">
-        <th><a href="#slide25">defaultdict</a></th>
-        <td><a href="#slide25">25</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-26">
-        <th><a href="#slide26">Counter</a></th>
-        <td><a href="#slide26">26</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-27">
-        <th><a href="#slide27">Comprehensions</a></th>
-        <td><a href="#slide27">27</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-28">
-        <th><a href="#slide28">Expectativa</a></th>
-        <td><a href="#slide28">28</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-29">
-        <th><a href="#slide29">Realidade</a></th>
-        <td><a href="#slide29">29</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-30">
-        <th><a href="#slide30">Recomendações</a></th>
-        <td><a href="#slide30">30</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-31">
-        <th><a href="#slide31">Filtrando</a></th>
-        <td><a href="#slide31">31</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-32">
-        <th><a href="#slide32">Set &amp; Dict Comprehensions</a></th>
-        <td><a href="#slide32">32</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-33">
-        <th><a href="#slide33">Faltou falar sobre</a></th>
-        <td><a href="#slide33">33</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-34">
-        <th><a href="#slide34">Fontes</a></th>
-        <td><a href="#slide34">34</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-35">
-        <th><a href="#slide35">Perguntas?</a></th>
-        <td><a href="#slide35">35</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-36">
-        <th><a href="#slide36">Obrigado :-)</a></th>
-        <td><a href="#slide36">36</a></td>
-      </tr>
-      
-      
-    </table>
-  </div>
-  
-  <div id="help" class="sidebar hidden">
-    <h2>Help</h2>
-    <table>
-      <caption>Help</caption>
-      <tr>
-        <th>Table of Contents</th>
-        <td>t</td>
-      </tr>
-      <tr>
-        <th>Exposé</th>
-        <td>ESC</td>
-      </tr>
-      <tr>
-        <th>Full screen slides</th>
-        <td>e</td>
-      </tr>
-      <tr>
-        <th>Presenter View</th>
-        <td>p</td>
-      </tr>
-      <tr>
-        <th>Source Files</th>
-        <td>s</td>
-      </tr>
-      <tr>
-        <th>Slide Numbers</th>
-        <td>n</td>
-      </tr>
-      <tr>
-        <th>Toggle screen blanking</th>
-        <td>b</td>
-      </tr>
-      <tr>
-        <th>Show/hide slide context</th>
-        <td>c</td>
-      </tr>
-      <tr>
-        <th>Notes</th>
-        <td>2</td>
-      </tr>
-      <tr>
-        <th>Help</th>
-        <td>h</td>
-      </tr>
-    </table>
-  </div>
-  <script>main()</script>
-</body>
-</html>
+
+
+            </article>
+
+
+            <article>
+            <h3>
+                Principios Clean Code
+            </h3>
+            <p>
+            This is a slide with just text. This is a slide with just text.
+            This is a slide with just text. This is a slide with just text.
+            This is a slide with just text. This is a slide with just text.
+            </p>
+            <p>
+            There is more text just underneath with a <code>code sample: 5px</code>.
+            </p>
+            </article>
+
+            <article class='smaller'>
+            <h3>
+                Simple slide with header and text (small font)
+            </h3>
+            <p>
+            This is a slide with just text. This is a slide with just text.
+            This is a slide with just text. This is a slide with just text.
+            This is a slide with just text. This is a slide with just text.
+            </p>
+            <p>
+            There is more text just underneath with a <code>code sample: 5px</code>.
+            </p>
+            </article>
+
+            <article>
+            <h3>
+                Slide with bullet points and a longer title, just because we
+                can make it longer
+            </h3>
+            <ul>
+                <li>
+                Use this template to create your presentation
+                </li>
+                <li>
+                Use the provided color palette, box and arrow graphics, and
+                chart styles
+                </li>
+                <li>
+                Instructions are provided to assist you in using this
+                presentation template effectively
+                </li>
+                <li>
+                At all times strive to maintain Google's corporate look and feel
+                </li>
+            </ul>
+            </article>
+
+            <article>
+            <h3>
+                Slide with bullet points that builds
+            </h3>
+            <ul class="build">
+                <li>
+                This is an example of a list
+                </li>
+                <li>
+                The list items fade in
+                </li>
+                <li>
+                Last one!
+                </li>
+            </ul>
+
+            <div class="build">
+                <p>Any element with child nodes can build.</p>
+                <p>It doesn't have to be a list.</p>
+            </div>
+            </article>
+
+            <article class='smaller'>
+            <h3>
+                Slide with bullet points (small font)
+            </h3>
+            <ul>
+                <li>
+                Use this template to create your presentation
+                <li>
+                Use the provided color palette, box and arrow graphics, and
+                chart styles
+                <li>
+                Instructions are provided to assist you in using this
+                presentation template effectively
+                <li>
+                At all times strive to maintain Google's corporate look and feel
+            </ul>
+            </article>
+
+            <article>
+            <h3>
+                Slide with a table
+            </h3>
+
+            <table>
+                <tr>
+                    <th>
+                        Name
+                        <th>
+                            Occupation
+                            <tr>
+                                <td>
+                                    Luke Mahé
+                                    <td>
+                                        V.P. of Keepin’ It Real
+                                        <tr>
+                                            <td>
+                                                Marcin Wichary
+                                                <td>
+                                                    The Michael Bay of Doodles
+                                                </table>
+                                                </article>
+
+                                                <article class='smaller'>
+                                                <h3>
+                                                    Slide with a table (smaller text)
+                                                </h3>
+
+                                                <table>
+                                                    <tr>
+                                                        <th>
+                                                            Name
+                                                            <th>
+                                                                Occupation
+                                                                <tr>
+                                                                    <td>
+                                                                        Luke Mahé
+                                                                        <td>
+                                                                            V.P. of Keepin’ It Real
+                                                                            <tr>
+                                                                                <td>
+                                                                                    Marcin Wichary
+                                                                                    <td>
+                                                                                        The Michael Bay of Doodles
+                                                                                    </table>
+                                                                                    </article>
+
+                                                                                    <article>
+                                                                                    <h3>
+                                                                                        Styles
+                                                                                    </h3>
+                                                                                    <ul>
+                                                                                        <li>
+                                                                                        <span class='red'>class="red"</span>
+                                                                                        <li>
+                                                                                        <span class='blue'>class="blue"</span>
+                                                                                        <li>
+                                                                                        <span class='green'>class="green"</span>
+                                                                                        <li>
+                                                                                        <span class='yellow'>class="yellow"</span>
+                                                                                        <li>
+                                                                                        <span class='black'>class="black"</span>
+                                                                                        <li>
+                                                                                        <span class='white'>class="white"</span>
+                                                                                        <li>
+                                                                                        <b>bold</b> and <i>italic</i>
+                                                                                    </ul>
+                                                                                    </article>
+
+                                                                                    <article>
+                                                                                    <h2>
+                                                                                        Segue slide
+                                                                                    </h2>
+                                                                                    </article>
+
+                                                                                    <article>
+                                                                                    <h3>
+                                                                                        Slide with an image
+                                                                                    </h3>
+                                                                                    <p>
+                                                                                    <img style='height: 500px' src='images/example-graph.png'>
+                                                                                    </p>
+                                                                                    <div class='source'>
+                                                                                        Source: Sergey Brin
+                                                                                    </div>
+                                                                                    </article>
+
+                                                                                    <article>
+                                                                                    <h3>
+                                                                                        Slide with an image (centered)
+                                                                                    </h3>
+                                                                                    <p>
+                                                                                    <img class='centered' style='height: 500px' src='images/example-graph.png'>
+                                                                                    </p>
+                                                                                    <div class='source'>
+                                                                                        Source: Larry Page
+                                                                                    </div>
+                                                                                    </article>
+
+                                                                                    <article class='fill'>
+                                                                                    <h3>
+                                                                                        Image filling the slide (with optional header)
+                                                                                    </h3>
+                                                                                    <p>
+                                                                                    <img src='images/example-cat.jpg'>
+                                                                                    </p>
+                                                                                    <div class='source white'>
+                                                                                        Source: Eric Schmidt
+                                                                                    </div>
+                                                                                    </article>
+
+                                                                                    <article>
+                                                                                    <h3>
+                                                                                        This slide has some code
+                                                                                    </h3>
+                                                                                    <section>
+                                                                                    <pre>
+&lt;script type='text/javascript'&gt;
+  // Say hello world until the user starts questioning
+  // the meaningfulness of their existence.
+  function helloWorld(world) {
+    for (var i = 42; --i &gt;= 0;) {
+      alert('Hello ' + String(world));
+    }
+  }
+&lt;/script&gt;
+&lt;style&gt;
+  p { color: pink }
+  b { color: blue }
+  u { color: 'umber' }
+&lt;/style&gt;
+</pre>
+                                                                                    </section>
+                                                                                    </article>
+
+                                                                                    <article class='smaller'>
+                                                                                    <h3>
+                                                                                        This slide has some code (small font)
+                                                                                    </h3>
+                                                                                    <section>
+                                                                                    <pre>
+&lt;script type='text/javascript'&gt;
+  // Say hello world until the user starts questioning
+  // the meaningfulness of their existence.
+  function helloWorld(world) {
+    for (var i = 42; --i &gt;= 0;) {
+      alert('Hello ' + String(world));
+    }
+  }
+&lt;/script&gt;
+&lt;style&gt;
+  p { color: pink }
+  b { color: blue }
+  u { color: 'umber' }
+&lt;/style&gt;
+</pre>
+                                                                                    </section>
+                                                                                    </article>
+
+                                                                                    <article>
+                                                                                    <q>
+                                                                                        The best way to predict the future is to invent it.
+                                                                                    </q>
+                                                                                    <div class='author'>
+                                                                                        Alan Kay
+                                                                                    </div>
+                                                                                    </article>
+
+                                                                                    <article class='smaller'>
+                                                                                    <q>
+                                                                                        A distributed system is one in which the failure of a computer 
+                                                                                        you didn’t even know existed can render your own computer unusable.
+                                                                                    </q>
+                                                                                    <div class='author'>
+                                                                                        Leslie Lamport
+                                                                                    </div>
+                                                                                    </article>
+
+                                                                                    <article class='nobackground'>
+                                                                                    <h3>
+                                                                                        A slide with an embed + title
+                                                                                    </h3>
+
+                                                                                    <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
+                                                                                    </article>
+
+                                                                                    <article class='nobackground'>
+                                                                                    <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
+                                                                                    </article>
+
+                                                                                    <article class='fill'>
+                                                                                    <h3>
+                                                                                        Full-slide embed with (optional) slide title on top
+                                                                                    </h3>
+                                                                                    <iframe src='http://www.google.com/doodle4google/history.html'></iframe>
+                                                                                    </article>
+
+                                                                                    <article>
+                                                                                    <h3>
+                                                                                        Thank you!
+                                                                                    </h3>
+
+                                                                                    <ul>
+                                                                                        <li>
+                                                                                        <a href='http://www.google.com'>google.com</a>
+                                                                                    </ul>
+                                                                                    </article>
+
+                                                                                    </section>
+                                                                                    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+                                                                                    </body>
+                                                                                </html>
+
