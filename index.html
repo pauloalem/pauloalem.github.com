@@ -170,6 +170,11 @@ Just nod if you can hear me</p>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-47657405-1']);
     _gaq.push(['_trackPageview']);
+    
+    _gaq.push(['_trackEvent', 'Social', 'Facebook', 'Like']);
+    _gaq.push(['_trackEvent', 'Social', 'Facebook', 'Share']);
+    _gaq.push(['_trackEvent', 'Social', 'Twitter', 'Tweet']);
+    
     (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
