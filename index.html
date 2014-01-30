@@ -7,98 +7,14 @@
                 <link href="http://pr0g.com.br/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="pr0g Atom Feed" />
                 
         <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
         <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="./css/ie.css"/>
-                <script src="./js/IE8.js" type="text/javascript"></script><![endif]-->
+<link rel="stylesheet" type="text/css" media="all" href="./css/ie.css"/>
+<script src="./js/IE8.js" type="text/javascript"></script><![endif]-->
 
         <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="./css/ie6.css"/><![endif]-->
-                <!-- Google Analytics Tracking Code -->
-
-                
-        
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-47657405-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-  
-   <script type="text/javascript">
-   
-  var _ga = _ga || {};
-var _gaq = _gaq || [];
-
-_ga.getSocialActionTrackers_ = function(
-    network, socialAction, opt_target, opt_pagePath) {
-  return function() {
-    var trackers = _gat._getTrackers();
-    for (var i = 0, tracker; tracker = trackers[i]; i++) {
-      tracker._trackSocial(network, socialAction, opt_target, opt_pagePath);
-    }
-  };
-};
-
-_ga.trackFacebook = function(opt_pagePath) {
-  try {
-    if (FB && FB.Event && FB.Event.subscribe) {
-      FB.Event.subscribe('edge.create', function(opt_target) {
-        _gaq.push(_ga.getSocialActionTrackers_('facebook', 'like',
-            opt_target, opt_pagePath));
-      });
-      FB.Event.subscribe('edge.remove', function(opt_target) {
-        _gaq.push(_ga.getSocialActionTrackers_('facebook', 'unlike',
-            opt_target, opt_pagePath));
-      });
-      FB.Event.subscribe('message.send', function(opt_target) {
-        _gaq.push(_ga.getSocialActionTrackers_('facebook', 'send',
-            opt_target, opt_pagePath));
-      });
-    }
-  } catch (e) {}
-};
-
-_ga.trackTwitterHandler_ = function(intent_event, opt_pagePath) {
-  var opt_target; //Default value is undefined
-  if (intent_event && intent_event.type == 'tweet' ||
-          intent_event.type == 'click') {
-    if (intent_event.target.nodeName == 'IFRAME') {
-      opt_target = _ga.extractParamFromUri_(intent_event.target.src, 'url');
-    }
-    var socialAction = intent_event.type + ((intent_event.type == 'click') ?
-        '-' + intent_event.region : ''); //append the type of click to action
-    _gaq.push(_ga.getSocialActionTrackers_('twitter', socialAction, opt_target,
-        opt_pagePath));
-  }
-};
-
-_ga.trackTwitter = function(opt_pagePath) {
-  intent_handler = function(intent_event) {
-    _ga.trackTwitterHandler_(intent_event, opt_pagePath);
-  };
-  
-  twttr.events.bind('click', intent_handler);
-  twttr.events.bind('tweet', intent_handler);
-};
-
-_ga.extractParamFromUri_ = function(uri, paramName) {
-  if (!uri) {
-    return;
-  }
-  var regex = new RegExp('[\\?&#]' + paramName + '=([^&#]*)');
-  var params = regex.exec(uri);
-  if (params != null) {
-    return unescape(params[1]);
-  }
-  return;
-};
-</script>
+<link rel="stylesheet" type="text/css" media="all" href="./css/ie6.css"/><![endif]-->
 
 </head>
 
@@ -115,7 +31,7 @@ _ga.extractParamFromUri_ = function(uri, paramName) {
 
                             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="./backbonejs-um-overview.html">Backbone.js, um overview</a></h1> 
+                    <h1 class="entry-title"><a href="./backbonejs-um-overview.html">Backbone.js, um overview</a></h1>
                     <footer class="post-info">
         <abbr class="published" title="2013-05-16T00:30:00">
                 Qui 16 Maio 2013
@@ -129,7 +45,7 @@ _ga.extractParamFromUri_ = function(uri, paramName) {
 </footer><!-- /.post-info --><p>Mês passado eu dei mais um <em>lightning talk</em> lá na Quatix, dessa vez sobre Backbone.js.
 Ao contrário do meu talk anterior, esse foi lightning mesmo, só dei uma passada sobre
 os conceitos gerais do backbone.js, pra ter uma idéia de como ele funciona.</p>
-<p>Dá uma olhada na  <a class="reference external" href="static/presentations/backbonejsumoverview/presentation.html">apresentação</a>.</p>
+<p>Dá uma olhada na <a class="reference external" href="static/presentations/backbonejsumoverview/presentation.html">apresentação</a>.</p>
                 </article>
                             </aside><!-- /#featured -->
                             <section id="content" class="body">
@@ -139,7 +55,7 @@ os conceitos gerais do backbone.js, pra ter uma idéia de como ele funciona.</p>
                                                 
 
                  
-                        <li><article class="hentry">    
+                        <li><article class="hentry">
                 <header>
                     <h1><a href="./python-do-alem.html" rel="bookmark"
                            title="Permalink to Python do Além">Python do Além</a></h1>
@@ -156,49 +72,30 @@ os conceitos gerais do backbone.js, pra ter uma idéia de como ele funciona.</p>
         </address>
         <p>In <a href="./category/presentations.html">presentations</a>. </p>
 <p>tags: <a href="./tag/python.html">python</a><a href="./tag/codigo-idiomatico.html">código idiomático</a><a href="./tag/pythonico.html">pythonico</a><a href="./tag/pythonic.html">pythonic</a></p>
-</footer><!-- /.post-info -->                <p>Lá na <a class="reference external" href="http://quatix.com.br/">Quatix</a>, onde trabalho, rolam <a class="reference external" href="http://pt.wikipedia.org/wiki/Lightning_Talk">Lightning Talks</a> nas terças-feiras.
+</footer><!-- /.post-info --> <p>Lá na <a class="reference external" href="http://quatix.com.br/">Quatix</a>, onde trabalho, rolam <a class="reference external" href="http://pt.wikipedia.org/wiki/Lightning_Talk">Lightning Talks</a> nas terças-feiras.
 Estou trabalhando lá a pouco mais de um ano e, de alguma maneira, escapei de
 apresentar um até a terça passada(falar em público nao é lá minha atividade
 preferida (: ).</p>
-<p>O talk, <em>&quot;Python do Além&quot;</em>,  foi sobre <a class="reference external" href="http://en.wikipedia.org/wiki/Programming_idiom">código idiomático</a>, mais ...</p>
+<p>O talk, <em>&quot;Python do Além&quot;</em>, foi sobre <a class="reference external" href="http://en.wikipedia.org/wiki/Programming_idiom">código idiomático</a>, mais ...</p>
                 <a class="readmore" href="./python-do-alem.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
                             
 
                  
-                        <li><article class="hentry">    
+                        <li><article class="hentry">
                 <header>
                     <h1><a href="./segundo.html" rel="bookmark"
                            title="Permalink to Segundo">Segundo</a></h1>
                 </header>
-        
-         <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : null, // ENTER your FB App ID
-        //channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel File
-        status     : true, // check login status
-        cookie     : true, // enable cookies to allow the server to access the session
-        xfbml      : true  // parse XFBML
-      });
-
-      _ga.trackFacebook(); //Google Analytics tracking
-
-    };
-
-    // Load the SDK's source Asynchronously
-    (function(d, debug){
-       var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement('script'); js.id = id; js.async = true;
-       js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-       ref.parentNode.insertBefore(js, ref);
-     }(document, /*debug*/ false));
-      </script>
-        
-        
-        
+                
+                       <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
         <div class="facebook fb-like" data-href="http://pr0g.com.br/" data-send="false" data-layout="button_count" data-width="115" data-show-faces="false"></div>
 
@@ -214,7 +111,7 @@ preferida (: ).</p>
         </address>
         <p>In <a href="./category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info -->                <p>Olá.</p>
+</footer><!-- /.post-info --> <p>Olá.</p>
 <p>Meu nome é Paulo Além, sou developer e nesse blog pretendo falar sobre tecnologia, coisas do trabalho, projetos interessantes e besteiras aleatórias.</p>
 <p>Espero ter a disciplina necessária para postar aqui com uma frequência razoavel :-)</p>
 <p>Até.</p>
@@ -225,7 +122,7 @@ preferida (: ).</p>
                             
 
                  
-                        <li><article class="hentry">    
+                        <li><article class="hentry">
                 <header>
                     <h1><a href="./hello.html" rel="bookmark"
                            title="Permalink to Hello">Hello</a></h1>
@@ -242,7 +139,7 @@ preferida (: ).</p>
         </address>
         <p>In <a href="./category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info -->                <p>Hello,
+</footer><!-- /.post-info --> <p>Hello,
 Is there anybody in there?
 Just nod if you can hear me</p>
 
@@ -265,6 +162,25 @@ Just nod if you can hear me</p>
                 <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
         </footer><!-- /#contentinfo -->
 
+
+    
+
+  
+ <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47657405-1']);
+    _gaq.push(['_trackPageview']);
+    
+    _gaq.push(['_trackEvent', 'Social', 'Facebook', 'Like']);
+    _gaq.push(['_trackEvent', 'Social', 'Facebook', 'Share']);
+    _gaq.push(['_trackEvent', 'Social', 'Twitter', 'Tweet']);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 
 </body>
 </html>
