@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<!-- <html lang="en"> -->
-
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
         <title>pr0g</title>
         <meta charset="utf-8" />
@@ -58,6 +56,16 @@ document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
 </head>
 
 <body id="index" class="home">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
         <header id="banner" class="body">
                 <h1><a href="./">pr0g </a></h1>
                 <nav><ul>
@@ -140,11 +148,13 @@ preferida (: ).</p>
         <script type="text/javascript">_ga.trackFacebook();</script>
 
         <div class="facebook fb-like" data-href="http://pr0g.com.br/" data-send="false" data-layout="button_count" data-width="115" data-show-faces="false"></div> -->
-          
+        <!--  
         <script src="http://connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
         <script type="text/javascript">_ga.trackFacebook();</script>
         <fb:like send="false" layout="button_count" width="150" show_faces="false"></fb:like> 
-        <fb:share-button href="http://pr0g.com.br/" type="button"></fb:share-button>
+        <fb:share-button href="http://pr0g.com.br/" type="button"></fb:share-button>-->
+        
+        <fb:like href="http://revistaautoesporte.globo.com/Noticias/noticia/2014/02/ford-revela-novo-ka-sedan-como-conceito.html" layout="button_count" action="like" show_faces="true" share="true"></fb:like>
         
         
         <!-- Place this tag where you want the +1 button to render. -->
