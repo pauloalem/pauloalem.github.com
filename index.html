@@ -15,6 +15,20 @@
 
         <!--[if lt IE 7]>
 <link rel="stylesheet" type="text/css" media="all" href="./css/ie6.css"/><![endif]-->
+ <!-- Google Analytics Tracking Code -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47657405-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <!-- Google Analytics Social Button Tracking -->
  </head>
 
 <body id="index" class="home">
@@ -63,6 +77,13 @@ os conceitos gerais do backbone.js, pra ter uma idéia de como ele funciona.</p>
                         <script>
                                 FB.Event.subscribe('edge.create', function(targetUrl) {
                                         _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
+                                });
+                                
+                                FB.Event.subscribe('edge.remove', function(targetUrl) {
+                                        _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]);
+                                });
+                                FB.Event.subscribe('message.send', function(targetUrl) {
+                                        _gaq.push(['_trackSocial', 'facebook', 'send', targetUrl]);
                                 });
                         </script>
                 <header>
