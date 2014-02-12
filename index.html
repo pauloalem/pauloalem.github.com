@@ -15,20 +15,6 @@
 
         <!--[if lt IE 7]>
 <link rel="stylesheet" type="text/css" media="all" href="./css/ie6.css"/><![endif]-->
- <!-- Google Analytics Tracking Code -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-47657405-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-  <!-- Google Analytics Social Button Tracking -->
  </head>
 
 <body id="index" class="home">
@@ -72,58 +58,7 @@ os conceitos gerais do backbone.js, pra ter uma idéia de como ele funciona.</p>
                         <li><article class="hentry">
       
                         
-                        <script src="http://connect.facebook.net/pt_BR/all.js#xfbml=1"></script>
-                        <fb:like layout="button_count" action="like" show_faces="true" share="true"></fb:like>
-                        <script>
-                                FB.Event.subscribe('edge.create', function(targetUrl) {
-                                        _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
-                                });
-                                
-                                FB.Event.subscribe('edge.remove', function(targetUrl) {
-                                        _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]);
-                                });
-                                FB.Event.subscribe('message.send', function(targetUrl) {
-                                        _gaq.push(['_trackSocial', 'facebook', 'send', targetUrl]);
-                                });
-                        </script>
-                         <a href="http://revistaautoesporte.globo.com/essa-e-nossa/noticia/2014/02/nene-posta-foto-de-sua-ferrari-em-rede-social.html" class="twitter-share-button" data-lang="en">Tweet</a>
-                          <script type="text/javascript" charset="utf-8">
-                            window.twttr = (function (d,s,id) {
-                              var t, js, fjs = d.getElementsByTagName(s)[0];
-                              if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
-                              js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-                              return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-                            }(document, "script", "twitter-wjs"));
-                          </script>
-                          <script>
-                                function extractParamFromUri(uri, paramName) {
-                                  if (!uri) {
-                                    return;
-                                  }
-                                  var regex = new RegExp('[\\?&#]' + paramName + '=([^&#]*)');
-                                  var params = regex.exec(uri);
-                                  if (params != null) {
-                                    return unescape(params[1]);
-                                  }
-                                  return;
-                                }
-                                function trackTwitter(intent_event) {
-                                    if (intent_event) {
-                                      var opt_pagePath;
-                                      if (intent_event.target && intent_event.target.nodeName == 'IFRAME') {
-                                            opt_target = extractParamFromUri(intent_event.target.src, 'url');
-                                      }
-                                      _gaq.push(['_trackSocial', 'twitter', 'tweet', opt_pagePath]);
-                                    }
-                                }
-
-                                  //Wrap event bindings - Wait for async js to load
-                                  twttr.ready(function (twttr) {
-                                    //event bindings
-                                    twttr.events.bind('tweet', trackTwitter);
-                                  });
-                                  
-                          </script>
+             
                                         <header>
                     <h1><a href="./python-do-alem.html" rel="bookmark"
                            title="Permalink to Python do Além">Python do Além</a></h1>
